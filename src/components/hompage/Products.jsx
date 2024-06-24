@@ -31,7 +31,6 @@ export default function Products() {
   const addToCart = (prod) => {
     dispatch(AddItem(prod));
     toast.success("Product added to cart successfully");
-
   };
 
   const removeFromCart = (prod) => {
@@ -95,12 +94,14 @@ export default function Products() {
               key={product.id}
             >
               <div className="card text-center p-4 h-100 scale-hover-shadow">
+                <Link to={`/products/${product.id}`}>
                 <img
                   src={product.image}
                   className="Product"
                   alt={product.title}
                   height="250px"
                 />
+                </Link>
                 <div className="card-body w">
                   <h6 className="card-title">
                     {product.title.substring(0, 18)}
