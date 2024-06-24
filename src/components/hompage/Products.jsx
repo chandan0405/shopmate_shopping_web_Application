@@ -94,7 +94,7 @@ export default function Products() {
               key={product.id}
             >
               <div className="card text-center p-4 h-100 scale-hover-shadow">
-                <Link to={`/products/${product.id}`}>
+              <Link to={`/products/${product.id}`}>
                 <img
                   src={product.image}
                   className="Product"
@@ -107,25 +107,25 @@ export default function Products() {
                     {product.title.substring(0, 18)}
                   </h6>
                   <p className="card-text fw-bold">${product.price}</p>
-                  <div className="d-flex justify-content-between">
+                  <div className="d-flex flex-md-column flex-xl-row gap-2 flex-lg-row justify-content-between">
                     {isInCart ? (
                       <button
                         onClick={() => removeFromCart(product)}
-                        className="btn btn-outline-danger"
+                        className="btn btn-outline-danger order-1 order-md-1"
                       >
                         Delete from cart
                       </button>
                     ) : (
                       <button
                         onClick={() => addToCart(product)}
-                        className="btn btn-outline-success"
+                        className="btn btn-outline-success order-1 order-md-1"
                       >
                         Add to cart
                       </button>
                     )}
                     <Link
                       to={`/products/${product.id}`}
-                      className="btn btn-outline-dark"
+                      className="btn btn-outline-dark order-2 order-md-2"
                     >
                       More
                     </Link>

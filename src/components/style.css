@@ -24,3 +24,14 @@
     transform: scale(1.05);
     box-shadow: 0px 0px 8px 7px #f1f1f1;
 }
+
+.Product{
+    max-height: 250px;
+    width: 100%;
+}
+.checkout-card{
+    margin: 20px auto;
+    width: 35rem;
+    
+}
+

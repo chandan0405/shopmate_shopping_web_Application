@@ -10,7 +10,7 @@ export default function CheckoutCard () {
   }
   const GST = (getTotalPrice() * 0.1).toFixed(2);
   return (
-    <div className='card' style={{ width: "18rem" }}>
+    <div className='card checkout-card' >
       <div className='card-header'>
         Home delivery
       </div>

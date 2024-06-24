@@ -4,6 +4,7 @@ const initialState = {
   
   const cartReducer = (state = initialState, action) => {
     switch (action.type) {
+      
       case "ADD_ITEM":
         const item = state.carts.find((cartItem) => cartItem.id === action.payload.id);
         if (item) {
@@ -20,11 +21,13 @@ const initialState = {
           ...state,
           carts: [...state.carts, { ...action.payload, quantity: 1 }],
         };
+
       case "DELETE_ITEM":
         return {
           ...state,
           carts: state.carts.filter((cartItem) => cartItem.id !== action.payload.id),
         };
+
       case "INCREASE_QUANTITY":
         return {
           ...state,

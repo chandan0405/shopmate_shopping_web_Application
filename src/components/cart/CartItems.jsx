@@ -32,8 +32,7 @@ export default function CartItems () {
       </div>
     );
   };
-  const iterate = (e) => {
-    console.log(e)
+  const iterate = (e,index) => {
     return (
       <div className="card mb-3 mt-5 bg-light shadow position-relative" key={e.id}>
       <div className="row g-0 align-items-center">
@@ -51,7 +50,7 @@ export default function CartItems () {
         </div>
 
         <div
-            class="col-12 col-md-2 text-center py-3 btn-group"
+            class="col-12 col-md-2 px-4 text-center py-3 btn-group"
             role="group"
             aria-label="Basic outlined example"
           >
